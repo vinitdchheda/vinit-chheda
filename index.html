@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vinit Chheda | Dubai Real Estate — 200M+ AED Transacted</title>
+<meta name="description" content="Vinit Chheda — Dubai real estate advisor. 200M+ AED in transactions. Off-plan, resale, investment. Buy, rent & invest with trust.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1128; --navy2:#0f1a3a; --gold:#c9a24b; --gold2:#e8c874;
+  --white:#ffffff; --muted:#a8b0c8; --card:#111c3f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--navy);color:var(--white);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(10,17,40,.85);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,162,75,.15)}
+nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;letter-spacing:.5px}
+.brand span{color:var(--gold)}
+.nav-links{display:flex;gap:28px;font-size:.9rem;color:var(--muted)}
+.nav-links a:hover{color:var(--gold)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#0a1128;font-weight:700;padding:13px 32px;border-radius:8px;border:none;cursor:pointer;font-size:.95rem;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,162,75,.35)}
+.btn-outline{background:transparent;border:1.5px solid var(--gold);color:var(--gold)}
+.btn-outline:hover{background:rgba(201,162,75,.1)}
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,162,75,.12),transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center}
+.eyebrow{color:var(--gold);font-size:.8rem;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;font-weight:600}
+.hero h1{font-size:3.4rem;line-height:1.15;margin-bottom:20px}
+.hero h1 .gold{color:var(--gold)}
+.hero p.lead{color:var(--muted);font-size:1.15rem;max-width:520px;margin-bottom:32px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap}
+.photo-wrap{position:relative}
+.photo-frame{width:340px;height:340px;border-radius:50%;overflow:hidden;border:4px solid var(--gold);box-shadow:0 20px 60px rgba(201,162,75,.25);margin:0 auto}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+.photo-badge{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:var(--navy2);border:1px solid var(--gold);border-radius:30px;padding:8px 20px;font-size:.85rem;white-space:nowrap}
+.photo-badge strong{color:var(--gold)}
+/* STATS */
+.stats{background:var(--navy2);border-top:1px solid rgba(201,162,75,.15);border-bottom:1px solid rgba(201,162,75,.15);padding:48px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.6rem;color:var(--gold);font-weight:700}
+.stat-label{color:var(--muted);font-size:.9rem;margin-top:4px}
+/* SECTIONS */
+section{padding:90px 0}
+.section-title{text-align:center;margin-bottom:16px;font-size:2.4rem}
+.section-sub{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 56px}
+/* SERVICES */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.service-card{background:var(--card);border:1px solid rgba(201,162,75,.12);border-radius:16px;padding:36px 28px;transition:transform .25s,border-color .25s}
+.service-card:hover{transform:translateY(-6px);border-color:rgba(201,162,75,.4)}
+.service-icon{font-size:2.2rem;margin-bottom:16px}
+.service-card h3{font-size:1.3rem;margin-bottom:12px}
+.service-card p{color:var(--muted);font-size:.95rem}
+/* WHY */
+.why{background:var(--navy2)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.why-list{list-style:none}
+.why-list li{margin-bottom:24px;padding-left:36px;position:relative}
+.why-list li::before{content:'✓';position:absolute;left:0;color:var(--gold);font-weight:700;font-size:1.2rem}
+.why-list strong{color:var(--gold2)}
+.why-list p{color:var(--muted);font-size:.95rem;margin-top:4px}
+/* FORM */
+.lead-form{background:var(--card);border:1px solid rgba(201,162,75,.2);border-radius:20px;padding:48px;max-width:640px;margin:0 auto}
+.lead-form h3{font-size:1.6rem;margin-bottom:8px;text-align:center}
+.lead-form p.sub{color:var(--muted);text-align:center;margin-bottom:32px;font-size:.95rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:var(--navy);border:1px solid rgba(201,162,75,.2);border-radius:8px;padding:13px 16px;color:var(--white);font-family:'Inter',sans-serif;font-size:.95rem}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold)}
+.form-group textarea{resize:vertical;min-height:100px}
+.submit-btn{width:100%;margin-top:8px}
+.form-note{text-align:center;color:var(--muted);font-size:.8rem;margin-top:16px}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
+.contact-card{background:var(--card);border-radius:16px;padding:32px 24px;border:1px solid rgba(201,162,75,.12)}
+.contact-card .icon{font-size:2rem;margin-bottom:12px}
+.contact-card h4{margin-bottom:8px}
+.contact-card a{color:var(--gold);font-weight:600}
+.contact-card a:hover{text-decoration:underline}
+/* FOOTER */
+footer{border-top:1px solid rgba(201,162,75,.15);padding:32px 0;text-align:center;color:var(--muted);font-size:.85rem}
+footer .brand{margin-bottom:8px}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;text-align:center}
+  .hero h1{font-size:2.4rem}
+  .hero p.lead{margin:0 auto 32px}
+  .hero-cta{justify-content:center}
+  .photo-frame{width:240px;height:240px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .services-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .lead-form{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <div class="brand">VINIT <span>CHHEDA</span></div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#why">Why Me</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#lead" class="btn" style="padding:10px 24px">Get in Touch</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Dubai Real Estate Advisor</div>
+        <h1>Buy, sell & invest in Dubai <span class="gold">with confidence.</span></h1>
+        <p class="lead">I'm Vinit Chheda — a Dubai-based realtor who has transacted <strong style="color:var(--gold2)">200M+ AED</strong> across off-plan, resale and investment deals. I help you see the full picture before you commit a single dirham.</p>
+        <div class="hero-cta">
+          <a href="#lead" class="btn">Book a Free Consultation</a>
+          <a href="https://wa.me/971585242596" class="btn btn-outline" target="_blank">WhatsApp Me</a>
+        </div>
+      </div>
+      <div class="photo-wrap">
+        <div class="photo-frame">
+          <img src="data:image/jpeg;base64,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" alt="Vinit Chheda — Dubai Real Estate Advisor">
+        </div>
+        <div class="photo-badge"><strong>200M+ AED</strong> transacted</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div><div class="stat-num">200M+</div><div class="stat-label">AED Transacted</div></div>
+      <div><div class="stat-num">3+</div><div class="stat-label">Years in Dubai Real Estate</div></div>
+      <div><div class="stat-num">100%</div><div class="stat-label">Honest, Full-Picture Advice</div></div>
+      <div><div class="stat-num">24h</div><div class="stat-label">Response Time</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">How I Can Help You</h2>
+    <p class="section-sub">From your first apartment to portfolio-level investment — one advisor, full clarity.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🏗️</div>
+        <h3>Off-Plan Investment</h3>
+        <p>New launches, payment plans and pre-handover deals — I track every major developer so you buy at the right phase, not the hyped one.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Buy & Sell</h3>
+        <p>Ready apartments, villas and townhouses. Real comparable data, honest pricing, and negotiation that protects your side of the table.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <h3>Investment Advisory</h3>
+        <p>Rental yields, capital growth, area selection. I show you the numbers behind the brochures so your money works as hard as you do.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔑</div>
+        <h3>Rentals & Leasing</h3>
+        <p>Find the right home or the right tenant — fast, verified, and with paperwork handled properly from day one.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial</h3>
+        <p>Offices and retail units you can actually buy — verified on developers' own listings, no lease-only noise.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <h3>Relocation Support</h3>
+        <p>Moving to Dubai? I help with areas, budgets, schools and setup — the full picture, not just the property.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why" class="why">
+  <div class="container">
+    <div class="why-grid">
+      <div>
+        <h2 class="section-title" style="text-align:left">Why Work With Me</h2>
+        <p style="color:var(--muted);margin-bottom:32px">Most agents sell you a property. I help you make a decision you'll still be happy about in five years.</p>
+        <ul class="why-list">
+          <li><strong>200M+ AED in real transactions</strong><p>Not promises — closed deals across Dubai's top communities and developers.</p></li>
+          <li><strong>Full-picture honesty</strong><p>If a deal isn't right for you, I'll tell you. My reputation is worth more than one commission.</p></li>
+          <li><strong>Developer-direct access</strong><p>New launches, priority units and payment plans — straight from the source.</p></li>
+          <li><strong>End-to-end handling</strong><p>From shortlisting to handover to resale — you deal with one person who knows your file.</p></li>
+        </ul>
+      </div>
+      <div>
+        <div class="lead-form" style="margin:0">
+          <h3>Start the Conversation</h3>
+          <p class="sub">Tell me what you're looking for — I'll respond within 24 hours.</p>
+          <form id="leadForm" action="https://docs.google.com/forms/d/e/1VEgAIfwi81opC52pLqlUIEz0bngrmP683BwFAY_VKSM/formResponse" method="POST" target="_blank">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name *</label>
+                <input type="text" name="entry.2047608132" required placeholder="Full name">
+              </div>
+              <div class="form-group">
+                <label>Phone / WhatsApp *</label>
+                <input type="tel" name="entry.435929012" required placeholder="+971 ...">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="entry.1757606506" placeholder="you@email.com">
+            </div>
+            <div class="form-group">
+              <label>I'm interested in</label>
+              <select name="entry.1872575599">
+                <option value="Buyer">Buying a property</option>
+                <option value="Seller">Selling a property</option>
+                <option value="Investor">Investing</option>
+                <option value="Tenant">Renting</option>
+                <option value="Other">Something else</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="entry.578740963" placeholder="Budget, area, timeline — anything that helps me help you faster."></textarea>
+            </div>
+            <input type="hidden" name="entry.1151841099" value="Personal Brand Site">
+            <input type="hidden" name="entry.2085266754" value="vinit-chheda.com">
+            <button type="submit" class="btn submit-btn">Send Enquiry →</button>
+            <p class="form-note">Your details go directly to me. No spam, no sharing.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Let's Talk</h2>
+    <p class="section-sub">Prefer to reach out directly? I'm one message away.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">💬</div>
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/971585242596" target="_blank">+971 58 524 2596</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📸</div>
+        <h4>Instagram</h4>
+        <a href="https://instagram.com/vinit.realestate" target="_blank">@vinit.realestate</a>
+      </div>
+      <div class="contact-card">
+        <div class="icon">📝</div>
+        <h4>Enquiry Form</h4>
+        <a href="#lead" id="lead">Fill the form above ↑</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand">VINIT <span>CHHEDA</span></div>
+    <p>Dubai Real Estate Advisor · 200M+ AED Transacted</p>
+    <p style="margin-top:8px">© 2026 Vinit Chheda. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+});
+// Form feedback
+document.getElementById('leadForm').addEventListener('submit',function(){
+  setTimeout(()=>{alert('Thank you! Your enquiry has been sent. I\'ll be in touch within 24 hours.');},500);
+});
+</script>
+</body>
+</html>
