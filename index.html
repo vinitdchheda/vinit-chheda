@@ -12,6 +12,7 @@
   --cream:#f7f2e7; --ink:#101828; --muted:#9aa3c0; --muted-d:#5b647f;
   --line:rgba(212,175,55,.28);
   --shadow:0 24px 60px -18px rgba(4,10,30,.35);
+  --r:20px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -218,6 +219,39 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
 .rv.in{opacity:1;transform:none}
 .rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}.rv.d5{transition-delay:.5s}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.marquee-track{animation:none}.orb,.badge,.scroll-hint::after{animation:none}}
+
+/* ---------- MOBILE POLISH ---------- */
+@media(max-width:640px){
+  section.block{padding:64px 0}
+  .sec-head{margin-bottom:36px}
+  h2.stitle{font-size:31px}
+  .sec-sub{font-size:16px}
+  .hero{padding:104px 0 84px;min-height:0}
+  .hero h1{font-size:36px}
+  .hero p.lead{font-size:16px;margin-bottom:26px}
+  .hero-ctas .btn{padding:13px 22px;font-size:14px}
+  .hero-proof{gap:10px;margin-top:30px}
+  .proof-chip{padding:9px 14px 9px 10px}
+  .proof-chip .n{font-size:17px}
+  .proof-chip .t{font-size:11px}
+  .photo-frame{width:min(320px,84vw)}
+  .badge{padding:10px 13px}
+  .badge .bn{font-size:16px}
+  .badge .bt{font-size:10px}
+  .badge.b1{top:2%;left:0}
+  .badge.b2{bottom:4%;right:0}
+  .stats-grid{padding:38px 0;gap:20px}
+  .stat .num{font-size:32px}
+  .stat .lbl{font-size:11px}
+  #why::before{font-size:180px;top:10px}
+  .quote-card{padding:34px 26px}
+  .quote-card p{font-size:18px}
+  .why-item{padding:18px 4px;gap:16px}
+  .why-num{font-size:26px;width:44px}
+  .svc{padding:28px 24px}
+  .enq-points{margin-top:22px}
+  .contact-card{padding:30px 24px}
+}
 </style>
 </head>
 <body>
