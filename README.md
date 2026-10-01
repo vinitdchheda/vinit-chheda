@@ -8,3 +8,5 @@ Personal landing page for Vinit Chheda, Dubai Real Estate Advisor.
 
 ## Replace photo
 Swap `vinit-profile.jpg` with a higher-res square photo anytime — no code change needed.
+
+<!-- deploy-trigger -->
