@@ -146,23 +146,49 @@ h2.stitle em{font-style:italic;color:#a07f1f}
 @media(max-width:900px){.why-grid{grid-template-columns:1fr;gap:44px}}
 </style>
 <style>
-/* ---------- JOURNEY ---------- */
-.journey{background:var(--cream)}
-.timeline{position:relative;max-width:860px;margin:0 auto;padding:10px 0}
-.timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(var(--gold),#e5d9b8,var(--gold));transform:translateX(-50%)}
-.tstep{position:relative;width:50%;padding:0 46px 46px 0;text-align:right}
-.tstep:nth-child(even){margin-left:50%;padding:0 0 46px 46px;text-align:left}
-.tstep .dot{position:absolute;top:4px;width:18px;height:18px;border-radius:50%;background:var(--gold);border:4px solid #fff;box-shadow:0 0 0 3px var(--gold),0 6px 14px -4px rgba(0,0,0,.3)}
-.tstep:nth-child(odd) .dot{right:-9px}
-.tstep:nth-child(even) .dot{left:-9px}
-.tstep .yr{font-family:Georgia,serif;font-style:italic;color:#a07f1f;font-size:15px;margin-bottom:4px}
-.tstep h4{font-size:19px;margin-bottom:6px}
-.tstep p{color:var(--muted-d);font-size:15px}
-@media(max-width:640px){
-  .timeline::before{left:9px}
-  .tstep,.tstep:nth-child(even){width:100%;margin-left:0;padding:0 0 36px 40px;text-align:left}
-  .tstep:nth-child(odd) .dot,.tstep:nth-child(even) .dot{left:0}
-}
+/* ---------- PROJECTS ---------- */
+#projects{background:#fff}
+.proj-tabs{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap}
+.proj-tab{padding:12px 28px;border-radius:999px;border:1.5px solid #e3ddcb;background:#fbf9f3;font-weight:700;font-size:14px;letter-spacing:.6px;cursor:pointer;color:#6b7390;transition:all .25s;font-family:inherit}
+.proj-tab:hover{border-color:var(--gold);color:#0a1330}
+.proj-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 10px 24px -10px rgba(10,19,48,.5)}
+.proj-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.proj-grid.hidden{display:none}
+.proj-card{background:var(--cream);border:1px solid #ece4d2;border-radius:18px;overflow:hidden;transition:transform .3s,box-shadow .3s,border-color .3s;display:flex;flex-direction:column}
+.proj-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--line)}
+.proj-art{height:148px;background:linear-gradient(135deg,#0a1330,#1b2f6e 70%,#2a3f8f);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex:none}
+.proj-art::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px}
+.proj-art::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.22),transparent 70%);top:-70px;right:-70px}
+.proj-art .mono{font-family:Georgia,serif;font-size:54px;color:var(--gold2);position:relative;z-index:1;font-style:italic;line-height:1;text-shadow:0 4px 18px rgba(0,0,0,.4)}
+.proj-art .ptype{position:absolute;bottom:12px;left:14px;z-index:1;font-size:10px;letter-spacing:1.8px;color:#0a1330;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:5px 12px;border-radius:999px;font-weight:800;text-transform:uppercase}
+.proj-body{padding:22px 20px;display:flex;flex-direction:column;flex:1}
+.proj-body h4{font-size:16.5px;margin-bottom:4px;line-height:1.35}
+.proj-body .pdev{font-size:12px;color:#a07f1f;font-weight:800;letter-spacing:1.2px;margin-bottom:10px;text-transform:uppercase}
+.proj-body p{font-size:13.5px;color:var(--muted-d);margin-bottom:16px;flex:1}
+.proj-enq{font-weight:800;font-size:14px;color:#0a1330;display:inline-flex;align-items:center;gap:6px}
+.proj-enq:hover{color:#a07f1f}
+.proj-note{margin-top:26px;text-align:center;color:var(--muted-d);font-size:14px}
+.proj-note a{color:#a07f1f;font-weight:700}
+@media(max-width:1000px){.proj-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.proj-grid{grid-template-columns:1fr}}
+
+/* ---------- JV ---------- */
+#jv{background:linear-gradient(150deg,#0b1434,#101f52 60%,#0b1434);color:#fff;position:relative;overflow:hidden}
+#jv::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.12),transparent 70%);top:-160px;left:-160px;pointer-events:none}
+.jv-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;position:relative;z-index:1}
+.jv-copy .kicker{color:var(--gold2)}
+.jv-copy h2{font-size:clamp(30px,3.6vw,44px);line-height:1.15;margin-bottom:18px;color:#fff}
+.jv-copy h2 em{font-style:italic;color:var(--gold2)}
+.jv-copy>p{color:#b9c0da;font-size:16.5px;margin-bottom:8px}
+.jv-card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:22px;padding:36px 32px;backdrop-filter:blur(8px)}
+.jv-steps{display:flex;flex-direction:column;gap:20px}
+.jv-step{display:flex;gap:16px;align-items:flex-start}
+.jv-step .ji{width:48px;height:48px;flex:none;border-radius:14px;background:var(--gold-dim);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:21px}
+.jv-step h4{color:#fff;font-size:16.5px;margin-bottom:4px}
+.jv-step p{color:#aeb6d4;font-size:14.5px}
+.jv-cta{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.jv-cta .btn.ghost{border-color:rgba(212,175,55,.5)}
+@media(max-width:900px){.jv-grid{grid-template-columns:1fr;gap:40px}}
 
 /* ---------- FORM ---------- */
 #enquire{background:radial-gradient(900px 480px at 50% 0%,#1b2f6e 0%,transparent 65%),var(--navy);color:#fff;position:relative;overflow:hidden}
@@ -263,7 +289,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
     <div class="nav-links">
       <a class="nl" href="#services">Services</a>
       <a class="nl" href="#why">Why Me</a>
-      <a class="nl" href="#journey">Journey</a>
+      <a class="nl" href="#projects">Projects</a>
       <a class="nl" href="#contact">Contact</a>
       <a class="btn" href="#enquire">Enquire →</a>
     </div>
@@ -369,6 +395,98 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section class="block" id="projects">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="kicker">Hand-picked for you</div>
+      <h2 class="stitle serif">Projects I'd put <em>my own money behind.</em></h2>
+      <p class="sec-sub">A short list I personally track — verified on the developers' own releases. Ask me for live availability &amp; payment plans.</p>
+    </div>
+    <div class="proj-tabs rv">
+      <button class="proj-tab active" data-tab="res">Residential</button>
+      <button class="proj-tab" data-tab="com">Commercial</button>
+    </div>
+    <div class="proj-grid" id="tab-res">
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">M</span><span class="ptype">Residential</span></div>
+        <div class="proj-body">
+          <h4>Mercedes-Benz Places by Binghatti</h4>
+          <div class="pdev">Binghatti</div>
+          <p>Branded residences from the Mercedes-Benz × Binghatti collaboration — one of Dubai's most talked-about launches.</p>
+          <a class="proj-enq" href="#enquire" data-proj="Mercedes-Benz Places by Binghatti">Enquire about this →</a>
+        </div>
+      </div>
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">D</span><span class="ptype">Residential</span></div>
+        <div class="proj-body">
+          <h4>Damac Bay 2</h4>
+          <div class="pdev">DAMAC</div>
+          <p>DAMAC's bay-side residential tower — waterfront living with the developer's signature amenities.</p>
+          <a class="proj-enq" href="#enquire" data-proj="Damac Bay 2">Enquire about this →</a>
+        </div>
+      </div>
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">E</span><span class="ptype">Residential</span></div>
+        <div class="proj-body">
+          <h4>Ellington Ocean House</h4>
+          <div class="pdev">Ellington</div>
+          <p>Ellington's ocean-facing residences — design-led homes from Dubai's boutique developer.</p>
+          <a class="proj-enq" href="#enquire" data-proj="Ellington Ocean House">Enquire about this →</a>
+        </div>
+      </div>
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">H</span><span class="ptype">Residential</span></div>
+        <div class="proj-body">
+          <h4>Hillsedge</h4>
+          <div class="pdev">Emaar</div>
+          <p>Emaar community living — family-oriented residences from Dubai's master developer.</p>
+          <a class="proj-enq" href="#enquire" data-proj="Hillsedge">Enquire about this →</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-grid hidden" id="tab-com">
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">E</span><span class="ptype">Offices</span></div>
+        <div class="proj-body">
+          <h4>ENARA by OMNIYAT</h4>
+          <div class="pdev">OMNIYAT</div>
+          <p>OMNIYAT's commercial tower — ultra-prime offices from Dubai's luxury developer.</p>
+          <a class="proj-enq" href="#enquire" data-proj="ENARA by OMNIYAT">Enquire about this →</a>
+        </div>
+      </div>
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">D</span><span class="ptype">Offices</span></div>
+        <div class="proj-body">
+          <h4>DAMAC Executive Heights</h4>
+          <div class="pdev">DAMAC</div>
+          <p>DAMAC's business tower — offices positioned for Dubai's corporate corridor.</p>
+          <a class="proj-enq" href="#enquire" data-proj="DAMAC Executive Heights">Enquire about this →</a>
+        </div>
+      </div>
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">S</span><span class="ptype">Offices & Retail</span></div>
+        <div class="proj-body">
+          <h4>SAMANA Business Park</h4>
+          <div class="pdev">Samana</div>
+          <p>Off-plan offices & retail by Samana — buyable commercial space, not lease-only.</p>
+          <a class="proj-enq" href="#enquire" data-proj="SAMANA Business Park">Enquire about this →</a>
+        </div>
+      </div>
+      <div class="proj-card rv">
+        <div class="proj-art"><span class="mono">A</span><span class="ptype">Offices</span></div>
+        <div class="proj-body">
+          <h4>Aspirz by Danube</h4>
+          <div class="pdev">Danube</div>
+          <p>Danube's commercial tower — offices from one of Dubai's most active developers.</p>
+          <a class="proj-enq" href="#enquire" data-proj="Aspirz by Danube">Enquire about this →</a>
+        </div>
+      </div>
+    </div>
+    <p class="proj-note rv">Looking for something specific? <a href="#enquire">Tell me your budget &amp; goal</a> — I'll shortlist from 1,900+ tracked projects.</p>
+  </div>
+</section>
+
 <!-- WHY -->
 <section class="block" id="why">
   <div class="container">
@@ -410,18 +528,34 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
     </div>
   </div>
 </section>
-<!-- JOURNEY -->
-<section class="block journey" id="journey">
-  <div class="container">
-    <div class="sec-head center rv">
-      <div class="kicker">The journey</div>
-      <h2 class="stitle serif">From Mumbai to <em>200M+ in Dubai.</em></h2>
+<!-- JV -->
+<section class="block" id="jv">
+  <div class="container jv-grid">
+    <div class="jv-copy rv">
+      <div class="kicker">Beyond buying &amp; selling</div>
+      <h2 class="serif">Joint ventures, <em>explained simply.</em></h2>
+      <p>You don't need to buy a finished unit to build wealth in Dubai real estate. In a joint venture, a landowner and a developer build together — one contributes the plot, the other the capital and execution — and the returns are split by agreement, not by guesswork.</p>
+      <p style="margin-top:14px">It's how serious players enter developments at the ground floor. And it's a conversation most agents can't have with you.</p>
+      <div class="jv-cta">
+        <a class="btn" href="#enquire">Discuss a JV →</a>
+        <a class="btn ghost" href="https://wa.me/971585242596" target="_blank" rel="noopener">WhatsApp Me</a>
+      </div>
     </div>
-    <div class="timeline">
-      <div class="tstep rv"><span class="dot"></span><div class="yr">The roots</div><h4>Mumbai, India</h4><p>Where I learned that trust is the only currency that compounds.</p></div>
-      <div class="tstep rv d1"><span class="dot"></span><div class="yr">August 2023</div><h4>Landed in Dubai</h4><p>Started in Dubai real estate with one rule — never sell a client something I wouldn't buy myself.</p></div>
-      <div class="tstep rv d2"><span class="dot"></span><div class="yr">2024 — 2025</div><h4>Off-plan &amp; investment focus</h4><p>Built deep developer relationships and a numbers-first advisory style across launches, resale and leasing.</p></div>
-      <div class="tstep rv d3"><span class="dot"></span><div class="yr">Today</div><h4>200M+ AED transacted</h4><p>Buyers, sellers and investors who came for a deal and stayed for the honesty.</p></div>
+    <div class="jv-card rv d1">
+      <div class="jv-steps">
+        <div class="jv-step">
+          <div class="ji">🧭</div>
+          <div><h4>Vetted land parcels</h4><p>Plots with clear title and genuine development potential — checked before you ever see them.</p></div>
+        </div>
+        <div class="jv-step">
+          <div class="ji">🤝</div>
+          <div><h4>Right-fit partners</h4><p>Introductions to credible developers and operators, matched to your capital and goals.</p></div>
+        </div>
+        <div class="jv-step">
+          <div class="ji">📝</div>
+          <div><h4>Deal structuring</h4><p>Profit-share terms negotiated and documented properly — protecting your side of the table.</p></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -529,6 +663,24 @@ const cio=new IntersectionObserver(es=>es.forEach(e=>{
   (function tick(t){const p=Math.min((t-t0)/dur,1),v=Math.round(end*(1-Math.pow(1-p,3)));el.textContent=v;if(p<1)requestAnimationFrame(tick)})(t0);
 }),{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>cio.observe(el));
+
+
+// Projects tabs
+document.querySelectorAll('.proj-tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.proj-tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-res').classList.toggle('hidden', btn.dataset.tab!=='res');
+    document.getElementById('tab-com').classList.toggle('hidden', btn.dataset.tab!=='com');
+  });
+});
+// Prefill enquiry message with the project name
+document.querySelectorAll('.proj-enq').forEach(a=>{
+  a.addEventListener('click',()=>{
+    const msg=document.querySelector('textarea[name="entry.578740963"]');
+    if(msg && !msg.value) msg.value='Hi Vinit, I\'d like details on '+a.dataset.proj+'.';
+  });
+});
 
 // Lead form: submit into hidden iframe, show inline success (never leaves the page)
 const form=document.getElementById('leadForm');
