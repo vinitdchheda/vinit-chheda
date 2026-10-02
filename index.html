@@ -159,7 +159,10 @@ h2.stitle em{font-style:italic;color:#a07f1f}
 .proj-art{height:148px;background:linear-gradient(135deg,#0a1330,#1b2f6e 70%,#2a3f8f);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;flex:none}
 .proj-art::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:26px 26px}
 .proj-art::after{content:"";position:absolute;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(212,175,55,.22),transparent 70%);top:-70px;right:-70px}
-.proj-art .mono{font-family:Georgia,serif;font-size:54px;color:var(--gold2);position:relative;z-index:1;font-style:italic;line-height:1;text-shadow:0 4px 18px rgba(0,0,0,.4)}
+.proj-art .mono{font-family:Georgia,serif;font-size:54px;color:var(--gold2);position:relative;z-index:0;font-style:italic;line-height:1;text-shadow:0 4px 18px rgba(0,0,0,.4)}
+.proj-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;transition:transform .5s ease}
+.proj-card:hover .proj-art img{transform:scale(1.07)}
+.proj-card{cursor:pointer}
 .proj-art .ptype{position:absolute;bottom:12px;left:14px;z-index:1;font-size:10px;letter-spacing:1.8px;color:#0a1330;background:linear-gradient(135deg,var(--gold),var(--gold2));padding:5px 12px;border-radius:999px;font-weight:800;text-transform:uppercase}
 .proj-body{padding:22px 20px;display:flex;flex-direction:column;flex:1}
 .proj-body h4{font-size:16.5px;margin-bottom:4px;line-height:1.35}
@@ -409,7 +412,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
     </div>
     <div class="proj-grid" id="tab-res">
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">M</span><span class="ptype">Residential</span></div>
+        <div class="proj-art"><img src="https://reelly-backend.s3.amazonaws.com/vault/ZZLvFZFt/_UBqSN0YB8ctWztYeGEIN_C-vtE/rQKcZQ/12.jpg" alt="Mercedes-Benz Places by Binghatti" loading="lazy" onerror="this.remove()"><span class="mono">M</span><span class="ptype">Residential</span></div>
         <div class="proj-body">
           <h4>Mercedes-Benz Places by Binghatti</h4>
           <div class="pdev">Binghatti</div>
@@ -418,7 +421,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
         </div>
       </div>
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">D</span><span class="ptype">Residential</span></div>
+        <div class="proj-art"><img src="https://reelly-backend.s3.amazonaws.com/vault/ZZLvFZFt/X_K9iQfWteNFEb7cNIdDg7DqD_k/E16Eug/24.jpg" alt="Damac Bay 2" loading="lazy" onerror="this.remove()"><span class="mono">D</span><span class="ptype">Residential</span></div>
         <div class="proj-body">
           <h4>Damac Bay 2</h4>
           <div class="pdev">DAMAC</div>
@@ -427,7 +430,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
         </div>
       </div>
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">E</span><span class="ptype">Residential</span></div>
+        <div class="proj-art"><img src="https://reelly-backend.s3.amazonaws.com/vault/ZZLvFZFt/4nBhUekNbO8QA2l6LSW9X56sA1Y/a77zJA/20.jpg" alt="Ellington Ocean House" loading="lazy" onerror="this.remove()"><span class="mono">E</span><span class="ptype">Residential</span></div>
         <div class="proj-body">
           <h4>Ellington Ocean House</h4>
           <div class="pdev">Ellington</div>
@@ -436,7 +439,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
         </div>
       </div>
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">H</span><span class="ptype">Residential</span></div>
+        <div class="proj-art"><img src="https://reelly-backend.s3.amazonaws.com/vault/ZZLvFZFt/_0FaLeNIGMa5zCc4c4_vNjOvzzY/E2fLNA/4.jpg" alt="Hillsedge" loading="lazy" onerror="this.remove()"><span class="mono">H</span><span class="ptype">Residential</span></div>
         <div class="proj-body">
           <h4>Hillsedge</h4>
           <div class="pdev">Emaar</div>
@@ -447,7 +450,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
     </div>
     <div class="proj-grid hidden" id="tab-com">
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">E</span><span class="ptype">Offices</span></div>
+        <div class="proj-art"><img src="https://h-v-properties.vercel.app/images/projects/commercial/enara-by-omniyat.webp" alt="ENARA by OMNIYAT" loading="lazy" onerror="this.remove()"><span class="mono">E</span><span class="ptype">Offices</span></div>
         <div class="proj-body">
           <h4>ENARA by OMNIYAT</h4>
           <div class="pdev">OMNIYAT</div>
@@ -456,7 +459,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
         </div>
       </div>
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">D</span><span class="ptype">Offices</span></div>
+        <div class="proj-art"><img src="https://h-v-properties.vercel.app/images/projects/commercial/damac-executive-heights.webp" alt="DAMAC Executive Heights" loading="lazy" onerror="this.remove()"><span class="mono">D</span><span class="ptype">Offices</span></div>
         <div class="proj-body">
           <h4>DAMAC Executive Heights</h4>
           <div class="pdev">DAMAC</div>
@@ -465,7 +468,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
         </div>
       </div>
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">S</span><span class="ptype">Offices & Retail</span></div>
+        <div class="proj-art"><img src="https://h-v-properties.vercel.app/images/projects/commercial/samana-business-park.webp" alt="SAMANA Business Park" loading="lazy" onerror="this.remove()"><span class="mono">S</span><span class="ptype">Offices & Retail</span></div>
         <div class="proj-body">
           <h4>SAMANA Business Park</h4>
           <div class="pdev">Samana</div>
@@ -474,7 +477,7 @@ footer .fline{width:60px;height:2px;background:var(--gold);margin:16px auto;opac
         </div>
       </div>
       <div class="proj-card rv">
-        <div class="proj-art"><span class="mono">A</span><span class="ptype">Offices</span></div>
+        <div class="proj-art"><img src="https://h-v-properties.vercel.app/images/projects/commercial/aspirz-by-danube.webp" alt="Aspirz by Danube" loading="lazy" onerror="this.remove()"><span class="mono">A</span><span class="ptype">Offices</span></div>
         <div class="proj-body">
           <h4>Aspirz by Danube</h4>
           <div class="pdev">Danube</div>
@@ -673,6 +676,19 @@ document.querySelectorAll('.proj-tab').forEach(btn=>{
     document.getElementById('tab-res').classList.toggle('hidden', btn.dataset.tab!=='res');
     document.getElementById('tab-com').classList.toggle('hidden', btn.dataset.tab!=='com');
   });
+});
+// Whole card click -> open lead form (prefill project)
+document.querySelectorAll('.proj-card').forEach(card=>{
+  card.setAttribute('role','button');
+  card.setAttribute('tabindex','0');
+  const go=()=>{
+    const link=card.querySelector('.proj-enq');
+    const msg=document.querySelector('textarea[name="entry.578740963"]');
+    if(msg && link && !msg.value) msg.value='Hi Vinit, I\'d like details on '+link.dataset.proj+'.';
+    document.getElementById('enquire').scrollIntoView({behavior:'smooth'});
+  };
+  card.addEventListener('click',e=>{ if(e.target.closest('a')) return; go(); });
+  card.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); } });
 });
 // Prefill enquiry message with the project name
 document.querySelectorAll('.proj-enq').forEach(a=>{
