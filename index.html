@@ -782,10 +782,31 @@ const leadFab=document.getElementById('leadFab');
 addEventListener('scroll',()=>{leadFab.classList.toggle('show',scrollY>700);},{passive:true});
 leadFab.addEventListener('click',()=>openLeadPopup(''));
 // Lead forms: submit into hidden iframe, show inline success (never leaves the page)
+// Dual-write: every lead also goes to the H&V CRM (in addition to the Google Sheet).
+// The ingest key below is a public lead-capture key (source-scoped); it cannot
+// read or modify CRM data.
+var CRM_INGEST_URL='https://hv-crm-api.onrender.com/api/v1/ingest';
+var CRM_INGEST_KEY='hv_b4b69c25ce76b8b73f7521782a673671268c7129c3176898';
+function pushLeadToCrm(f){
+  try{
+    var v=function(n){var el=f.querySelector('[name="'+n+'"]');return el?el.value.trim():'';};
+    var payload={
+      name:v('entry.2047608132'),
+      phone:v('entry.435929012'),
+      email:v('entry.1757606506')||undefined,
+      source:'Vinit personal website',
+      projectInterest:v('entry.1151841099')||undefined,
+      requirements:{message:v('entry.578740963')||undefined}
+    };
+    if(!payload.name||!payload.phone) return;
+    fetch(CRM_INGEST_URL,{method:'POST',headers:{'Content-Type':'application/json','x-api-key':CRM_INGEST_KEY},body:JSON.stringify(payload)}).catch(function(){});
+  }catch(e){}
+}
 function wireLeadForm(formId,wrapId,successId,onShown){
   const f=document.getElementById(formId);
   if(!f) return;
   f.addEventListener('submit',()=>{
+    pushLeadToCrm(f);
     setTimeout(()=>{
       document.getElementById(wrapId).style.display='none';
       document.getElementById(successId).style.display='block';
